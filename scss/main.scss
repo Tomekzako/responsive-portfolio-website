@@ -1,10 +1,4 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
-
-@mixin easeOut {
-  transition: all 0.5s ease-out;
-}
-
+@import 'config';
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +6,7 @@ $secondary-color: #eece1a;
 }
 
 body {
-  background: $primary-color;
+  @include background;
   color: #fff;
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -23,17 +17,16 @@ h1,
 h2,
 h3 {
   font-weight: 400;
-
   &.lg-heading {
     font-size: 6rem;
   }
-
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
   }
 }
+
 a {
   color: #fff;
   text-decoration: none;
@@ -52,10 +45,8 @@ header {
 main {
   padding: 4rem;
   height: 100%;
-
   .icons {
     margin-top: 1rem;
-
     a {
       padding: 0.4rem;
       &:hover {
@@ -64,7 +55,6 @@ main {
       }
     }
   }
-
   &#home {
     overflow: hidden;
     h1 {

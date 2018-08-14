@@ -4,11 +4,14 @@
   padding: 0; }
 
 body {
-  background: #444;
   color: #fff;
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
+  body#bg-img {
+    background: linear-gradient(rgba(68, 68, 68, 0.9), rgba(68, 68, 68, 0.9)), url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
 
 h1,
 h2,
