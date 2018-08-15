@@ -93,9 +93,10 @@
         @include easeOut;
         transform: translate3d(0, 100%, 0);
         &--portrait {
-            width: 250px;
-            height: 250px;
-            background: url('../img/portrait.jpg');
+            width: 16rem;
+            height: 16rem;
+            background: url(../img/portrait.jpg);
+            background-size: contain;
             border-radius: 50%;
             border: 3px solid $secondary-color;
         }
