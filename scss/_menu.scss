@@ -26,3 +26,35 @@
         }
     }
 }
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    visibility: hidden;
+    display: flex;
+    &.show {
+        visibility: visible;
+    }
+    &__branding,
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    &__nav {
+        background: darken($primary-color, 5);
+        list-style: none;
+        transform: translate3d(0, -100%, 0);
+        @include easeOut;
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}

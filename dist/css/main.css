@@ -18,6 +18,32 @@
   .menu__btn.close .menu__btn--line:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px); }
 
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+  display: flex; }
+  .menu.show {
+    visibility: visible; }
+  .menu__branding, .menu__nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu__nav {
+    background: #373737;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu__nav.show {
+      transform: translate3d(0, 0, 0); }
+
 * {
   box-sizing: border-box;
   margin: 0;
