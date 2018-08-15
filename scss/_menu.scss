@@ -56,6 +56,30 @@
         &.show {
             transform: translate3d(0, 0, 0);
         }
+        &--item {
+            transform: translate3d(600px, 0, 0);
+            @include easeOut;
+            &.show {
+                transform: translate3d(0, 0, 0);
+            }
+            &.current>a {
+                color: $secondary-color;
+            }
+        }
+        &--link {
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 300;
+            color: #fff;
+            text-decoration: none;
+            @include easeOut;
+            padding: 1rem 0;
+            display: inline-block;
+            position: relative;
+            &:hover {
+                color: $secondary-color;
+            }
+        }
     }
     &__branding {
         background: $primary-color;
@@ -71,5 +95,11 @@
         &.show {
             transform: translate3d(0, 0, 0);
         }
+    }
+}
+
+@for $x from 1 through 4 {
+    .menu__nav--item:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
     }
 }
