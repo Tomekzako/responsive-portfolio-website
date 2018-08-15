@@ -34,6 +34,9 @@
     opacity: 0.9;
     visibility: hidden;
     display: flex;
+    @include mediaMd {
+        flex-direction: column-reverse;
+    }
     &.show {
         visibility: visible;
     }
@@ -47,6 +50,10 @@
         width: 50%;
         height: 100vh;
         overflow: hidden;
+        @include mediaMd {
+            width: 100%;
+            height: 50vh;
+        }
     }
     &__nav {
         background: darken($primary-color, 5);
@@ -67,7 +74,7 @@
             }
         }
         &--link {
-            font-size: 30px;
+            font-size: 2.5rem;
             text-transform: uppercase;
             font-weight: 300;
             color: #fff;

@@ -6,6 +6,18 @@
   padding: 0;
 }
 
+html {
+  @include mediaLg {
+    font-size: 85%;
+  }
+  @include mediaMd {
+    font-size: 70%;
+  }
+  @include mediaSm {
+    font-size: 60%;
+  }
+}
+
 body {
   @include background;
   color: #fff;
@@ -46,6 +58,9 @@ header {
 main {
   padding: 4rem;
   height: 100%;
+  @include mediaMd {
+    text-align: center;
+  }
   .icons {
     margin-top: 1rem;
     a {
@@ -60,6 +75,9 @@ main {
     overflow: hidden;
     h1 {
       margin-top: 20vh;
+      @include mediaMd {
+        margin-top: 15vh;
+      }
     }
   }
 }
