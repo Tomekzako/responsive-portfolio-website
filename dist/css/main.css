@@ -158,6 +158,7 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
+      color: #fff;
       padding: 0.4rem; }
       main .icons a:hover {
         color: #eece1a;
