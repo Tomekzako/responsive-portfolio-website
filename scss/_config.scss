@@ -5,48 +5,52 @@ $home-image: url(../img/background.jpg);
 $backgroung-opacity: 0.9;
 
 @function set-text-color($color) {
-    @if (lightness($color) > 40) {
-        @return #000;
-    } @else {
-        @return #fff;
-    }
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
 }
 
-
 @mixin easeOut {
-    transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 @mixin background {
-    @if $show-home-image {
-        &#bg-img {
-            background: linear-gradient( rgba($primary-color, $backgroung-opacity), rgba($primary-color, $backgroung-opacity)), $home-image;
-            background-attachment: fixed;
-            background-size: cover;
-        }
+  @if $show-home-image {
+    background: $primary-color;
+    &#bg-img {
+      background: linear-gradient(
+          rgba($primary-color, $backgroung-opacity),
+          rgba($primary-color, $backgroung-opacity)
+        ),
+        $home-image;
+      background-attachment: fixed;
+      background-size: cover;
     }
+  }
 }
 
 @mixin mediaSm {
-    @media screen and (max-width: 500px) {
-        @content;
-    }
+  @media screen and (max-width: 500px) {
+    @content;
+  }
 }
 
 @mixin mediaMd {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }
 
 @mixin mediaLg {
-    @media screen and (min-width: 769px) and (max-width: 1170px) {
-        @content;
-    }
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
 }
 
 @mixin mediaXl {
-    @media screen and (min-width: 1170px) {
-        @content;
-    }
+  @media screen and (min-width: 1170px) {
+    @content;
+  }
 }

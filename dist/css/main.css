@@ -113,6 +113,7 @@
     font-size: 60%; } }
 
 body {
+  background: #444;
   color: #fff;
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
