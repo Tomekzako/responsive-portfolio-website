@@ -89,6 +89,10 @@ main {
     grid-gap: 30px;
     grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
     grid-template-columns: repeat(3, 1fr);
+    @include mediaMd {
+      grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+      grid-template-columns: 1fr;
+    }
     &--img {
       grid-area: bioimage;
       margin: auto;
