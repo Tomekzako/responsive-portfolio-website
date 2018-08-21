@@ -1,5 +1,5 @@
-@import 'config';
-@import 'menu';
+@import "config";
+@import "menu";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -87,10 +87,10 @@ main {
   &__info {
     display: grid;
     grid-gap: 30px;
-    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+    grid-template-areas: "bioimage bio bio" "job1 job2 job3";
     grid-template-columns: repeat(3, 1fr);
     @include mediaMd {
-      grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+      grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
       grid-template-columns: 1fr;
     }
     &--img {
@@ -114,12 +114,59 @@ main {
     }
     .job {
       background: lighten($primary-color, 5);
-      padding: .5rem;
+      padding: 0.5rem;
       border-bottom: 5px solid $secondary-color;
       h6 {
         padding: 15px 0;
       }
     }
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+  @include mediaXl {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include mediaLg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include mediaMd {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mediaSm {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    width: 100%;
+    border: 2px solid #fff;
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+  &-light {
+    background: lighten($primary-color, 50);
+    color: #fff;
+  }
+  &-dark {
+    background: darken($primary-color, 50);
+    color: #fff;
   }
 }
 
